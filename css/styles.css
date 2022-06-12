@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F5F5F5;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+div#conteudo{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+header nav .navbar {
+    height: 60px !important;
+}
+
+.sidebar{
+    background-color: #333F52;
+    min-height: 100%;
+    color: #FFF;
+    min-width: 250px;
+    max-width: 250px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 60px);
+}
+
+.opcoes-menu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.opcoes-menu a, 
+.footer a {
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active {
+    font-weight: 700;
+}
+
+.footer {
+    border-top: 1px solid #475162;
+    background-color: #273142;
+    height: 55px !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+section {
+    width: 100%;
+}
+
+.container {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.accordion-button {
+    font-size: 14px;
+    font-weight: bold;
+    color: #354052;
+    background-color: #EBEBEB;
+}
+
+.accordion-button:not(.collapsed)
+ {
+    color: #354052;
+    background-color: #EBEBEB;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-icon);
+}
+
+.botoes-utilizador{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botoes-utilizador button {
+    width: 195px;
+    border-radius: 30px;
+    padding: 8px;
+}
+
+.botoes-utilizador .guardar{
+    background-color: #00ADE6;
+    color: #FFF;
+    margin-left: 20px;
+}
+
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #EBEBEB;
+    padding: 5px;
+  }
+  input:focus {
+    border-color: #EBEBEB;
+  }
+
+  label {
+      color: #7F8FA6;
+      font-weight: bold;
+      font-size: 14px;
+  }
+
+  .input-form {
+      max-width: 330px;
+  }
+
+  .input-form input{
+      min-width: 300px;
+  }
+
+  .flexCheckChecked:checked{
+      font-weight: bold;
+  }
+
+  @media (min-width: 576px) {
+      .menu {
+          max-width: 120px;
+      }
+  }
+
+  @media (min-width: 768) and (max-width: 975px) {
+    .input-form {
+        max-width: 230px;
+    }
+  
+    .input-form input{
+        min-width: 200px;
+    }
+
+    .container {
+        overflow-y: scroll;
+        max-width: 720px;
+    }
+  }

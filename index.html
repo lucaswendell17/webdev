@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+
+</head>
+
+<body>
+</body>
+
+</html>
+
+<title>WEBDEV - Premium Minds</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/LOGO-WDR.png" />
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="conteudo">
+        <aside class="sidebar p-0 ">
+            <nav id="menu">
+                <ul class="list-unstyled px-5 mt-5">
+                    <li class="opcoes-menu"><a id="lorem-ipsum" class="">Lorem Ipsum</a>
+                    </li>
+                    <li class="opcoes-menu"><a id="utilizador" class="active">Utilizador</a></li>
+                    <li class="opcoes-menu"><a id="quantum-solum" class="">Quantum solum</a>
+                    </li>
+                    <li class="opcoes-menu"><a id="marcus-tremer" class="">Marcus Tremer</a>
+                    </li>
+                </ul>
+
+                <div class="footer d-flex">
+                    <span id="empresa">0</span><sup>®</sup>&nbsp;&nbsp;<a href="https://www.premium-minds.com/"
+                        target="_blank">Premium-minds.com</a>
+                </div>
+            </nav>
+        </aside>
+        <section class="row mt-4">
+            <div id="page">
+                Teste
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/index.js" text=""></script>
+    <script>
+        $(document).ready(function () {
+            var data = new Date().getFullYear();
+            $('#empresa').html(data);
+            DevWeb.carregar();
+            $('#page').load('./pages/utilizador.html');
+        });
+    </script>
+</body>
+
+</html>

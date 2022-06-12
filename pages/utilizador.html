@@ -1,0 +1,101 @@
+<div class="container">
+
+    <h1>Utilizador</h1>
+
+    <form id="formUtilizador" method="post">
+
+        <div class="row mt-5">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            Tipo de utilizador
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="chkProject"
+                                    onclick="marcaDesmarca(this);">
+                                <label class="form-check-label" for="chkProject">
+                                    Project Manager
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="chkDeveloper" checked
+                                    onclick="marcaDesmarca(this);">
+                                <label class="form-check-label" for="chkDeveloper">
+                                    Developer
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="chkArchitect"
+                                    onclick="marcaDesmarca(this);">
+                                <label class="form-check-label" for="chkArchitect">
+                                    Architect
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                Contacto
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                                <div class="row d-flex">
+                                    <div class="input-form">
+                                        <label for="email">Email</label><br>
+                                        <input type="email" class="" placeholder="Email" name="email" required>
+                                    </div>
+                                    <div class="input-form">
+                                        <label for="password">Palavra-passe</label><br>
+                                        <input type="password" class="" placeholder="Palavra-passe" name="password"
+                                            minlength="6" required>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-2">
+                                    <div class="input-form">
+                                        <label for="fone">Telefone</label><br>
+                                        <input type="text" placeholder="Telefone" id="fone" name="fone" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4 botoes-utilizador p-0 col-sm-12 col-xs-12">
+                <button id="cancelar" class="btn bg-white btn-sm fw-bold" type="button">Cancelar</button>
+                <button id="gravar" class="btn btn-sm text-uppercase fw-bold guardar" type="submit">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+
+    $('#fone').mask("(+999) 999 999 999");
+
+    $('form').on('submit', function (e) {
+        e.preventDefault();
+        DevWeb.checarForm();
+    })
+
+    function marcaDesmarca(caller) {
+        var checks = document.querySelectorAll('input[type="checkbox"]');
+        for (let i = 0; i < checks.length; i++) {
+            checks[i].checked = checks[i] == caller;
+        }
+    };
+
+</script>
